@@ -1,0 +1,31 @@
+# Environment & secrets
+.env
+
+# Local personal data — NEVER commit real financial data
+data/raw/*
+!data/raw/wallet/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# dlt
+.dlt/secrets.toml
+*.duckdb
+
+# dbt
+target/
+dbt_packages/
+logs/
+.user.yml
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

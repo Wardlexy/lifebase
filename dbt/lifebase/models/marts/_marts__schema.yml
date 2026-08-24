@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: fact_financial_transactions
+    description: "Sign-normalized financial events across all wallet accounts"
+    columns:
+      - name: occurred_at
+        data_tests: [not_null]
+      - name: signed_amount
+        data_tests: [not_null]

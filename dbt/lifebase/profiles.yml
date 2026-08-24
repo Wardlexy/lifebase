@@ -1,0 +1,12 @@
+lifebase:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('LIFEBASE_DB_HOST', 'localhost') }}"
+      port: "{{ env_var('LIFEBASE_DB_PORT', '5432') | int }}"
+      user: "{{ env_var('POSTGRES_USER', 'lifebase') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD', 'lifebase') }}"
+      dbname: "{{ env_var('POSTGRES_DB', 'lifebase') }}"
+      schema: public
+      threads: 4
